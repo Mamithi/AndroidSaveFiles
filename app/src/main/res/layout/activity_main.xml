@@ -6,29 +6,95 @@
     android:layout_height="match_parent"
     tools:context="com.mamithi.savefiles.MainActivity">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/button"
+        android:layout_marginTop="11dp"
+        android:text="Save File to internal storage" />
+
     <EditText
         android:id="@+id/edit_text"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="12dp" />
+
     <Button
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
         android:layout_below="@+id/edit_text"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="Save"
-        android:onClick="save"/>
+        android:layout_marginTop="19dp"
+        android:onClick="save"
+        android:text="Save Internally" />
 
     <Button
         android:id="@+id/btnLoad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btnSave"
-        android:layout_alignStart="@+id/btnSave"
-        android:layout_below="@+id/btnSave"
-        android:layout_marginTop="31dp"
-        android:text="Load"
-        android:onClick="load"/>
+        android:layout_alignBaseline="@+id/btnSave"
+        android:layout_alignBottom="@+id/btnSave"
+        android:layout_alignEnd="@+id/text"
+        android:layout_alignRight="@+id/text"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:onClick="load"
+        android:text="Load" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fileName"
+        android:layout_centerHorizontal="true"
+        android:text="Save to external storage"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/fileName"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="61dp"
+        android:ems="10"
+        android:hint="@string/fileName"
+        android:inputType="textPersonName"
+        tools:text="@string/fileName" />
+
+    <EditText
+        android:id="@+id/text"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button"
+        android:layout_alignLeft="@+id/fileName"
+        android:layout_alignStart="@+id/fileName"
+        android:layout_marginBottom="17dp"
+        android:ems="10"
+        android:hint="@string/text"
+        android:inputType="textPersonName"
+        tools:text="@string/text" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btnSaveExternal"
+        tools:text="@string/btnSaveExternal"
+        android:onClick="writeFile"/>
+
+
+
 
 </RelativeLayout>
